@@ -456,11 +456,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mikayla/meal-service/meal-service/meal-service.csproj",
+      "projectUniqueName": "/Users/mikayla/Source/repos/meal-service/meal-service.csproj",
       "projectName": "meal-service",
-      "projectPath": "/Users/mikayla/meal-service/meal-service/meal-service.csproj",
+      "projectPath": "/Users/mikayla/Source/repos/meal-service/meal-service.csproj",
       "packagesPath": "/Users/mikayla/.nuget/packages/",
-      "outputPath": "/Users/mikayla/meal-service/meal-service/obj/",
+      "outputPath": "/Users/mikayla/Source/repos/meal-service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mikayla/.config/NuGet/NuGet.Config"
