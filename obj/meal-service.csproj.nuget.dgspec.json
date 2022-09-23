@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mikayla/Source/repos/meal-service/meal-service.csproj": {}
+    "/Users/mikayla/meal-service/meal-service/meal-service.csproj": {}
   },
   "projects": {
-    "/Users/mikayla/Source/repos/meal-service/meal-service.csproj": {
+    "/Users/mikayla/meal-service/meal-service/meal-service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mikayla/Source/repos/meal-service/meal-service.csproj",
+        "projectUniqueName": "/Users/mikayla/meal-service/meal-service/meal-service.csproj",
         "projectName": "meal-service",
-        "projectPath": "/Users/mikayla/Source/repos/meal-service/meal-service.csproj",
+        "projectPath": "/Users/mikayla/meal-service/meal-service/meal-service.csproj",
         "packagesPath": "/Users/mikayla/.nuget/packages/",
-        "outputPath": "/Users/mikayla/Source/repos/meal-service/obj/",
+        "outputPath": "/Users/mikayla/meal-service/meal-service/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mikayla/.config/NuGet/NuGet.Config"
