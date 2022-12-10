@@ -3,11 +3,13 @@ namespace meal_service.Models
 {
     public class Meal
     {
-        public String Name { get; set; }
+        public string Name { get; set; }
         public bool Vegetarian { get; set; }
         public bool Vegan { get; set; }
         public string [] Ingredients { get; set; }
-        public DateTime PrepTime { get; set; }
-        public DateTime TotalTime { get; set; }
+        public int PrepTime { get; set; }
+        public int TotalTime { get; set; }
+        public bool BudgetFriendly { get; set; }
+        public string Difficulty { get; set; }
     }
 }

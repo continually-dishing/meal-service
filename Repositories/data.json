@@ -1,0 +1,30 @@
+﻿[
+    {
+      "Name": "Steak tacos",
+      "Vegetarian": false,
+      "Vegan": false,
+      "PrepTime": 10,
+      "CookTime": 20,
+      "Difficulty": "Easy",
+      "BudgetFriendly": true
+    },
+    {
+      "Name": "Sushi",
+      "Vegetarian": false,
+      "Vegan": false,
+      "PrepTime": 40,
+      "CookTime": 0,
+      "Difficulty": "Medium",
+      "BudgetFriendly": false
+    },
+    {
+      "Name": "Hamburgers",
+      "Vegetarian": false,
+      "Vegan": false,
+      "PrepTime": 10,
+      "CookTime": 20,
+      "Difficulty": "Easy",
+      "BudgetFriendly": true
+    }
+
+]

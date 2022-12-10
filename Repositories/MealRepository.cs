@@ -1,28 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using meal_service.Models;
-using meal_service.Repositories;
 using meal_service.Repositories.Interfaces;
 
-namespace meal_service.Services
+namespace meal_service.Repositories
 {
-    public class MealService : IMealService
+    public class MealRepository: IMealRepository
     {
-        private readonly IMealRepository _meal_repo;
-
-        public MealService(IMealRepository meal_repo)
+        public MealRepository()
         {
-            _meal_repo = meal_repo;
         }
 
-        public async Task<IEnumerable<Meal>> GetMeals()
+
+        public async Task<List<Meal>> GetMeals()
         {
-            var result = await _meal_repo.GetMeals();
-            return result;
+
+            var filePath = "/Users/mikayla/source/repos/meal-service/Repositories/data.json";
+
+            using FileStream openStream = File.OpenRead(filePath);
+            var items =await JsonSerializer.DeserializeAsync<List<Meal>>(openStream);
+
+            return items;
         }
 
-        public Meal GetMeal(Guid id)
+        public Task<Meal> GetMeal(Guid id)
         {
             throw new NotImplementedException();
         }
@@ -41,5 +46,6 @@ namespace meal_service.Services
         {
             throw new NotImplementedException();
         }
+
     }
 }

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using meal_service.Repositories;
+using meal_service.Repositories.Interfaces;
+using meal_service.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +30,9 @@ namespace meal_service
         {
             services.AddControllers();
             services.AddSwaggerGen();
+            services.AddTransient<IMealService, MealService>();
+            services.AddTransient<IMealRepository, MealRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +43,7 @@ namespace meal_service
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V2");
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 });
             }
 
