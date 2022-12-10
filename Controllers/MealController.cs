@@ -34,7 +34,7 @@ namespace meal_service.Controllers
         }
 
         [HttpPut]
-        public MealModel UpdateMeal()
+        public Meal UpdateMeal()
         {
             return null;
         }
