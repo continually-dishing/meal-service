@@ -80,3 +80,4 @@
 /Users/mikayla/meal-service/meal-service/obj/Debug/netcoreapp3.1/meal-service.pdb
 /Users/mikayla/meal-service/meal-service/obj/Debug/netcoreapp3.1/meal-service.genruntimeconfig.cache
 /Users/mikayla/Source/repos/meal-service/bin/Debug/netcoreapp3.1/Repositories/data.json
+/Users/mikayla/Source/repos/meal-service/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll

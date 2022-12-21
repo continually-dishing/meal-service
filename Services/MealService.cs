@@ -27,9 +27,10 @@ namespace meal_service.Services
             throw new NotImplementedException();
         }
 
-        public Meal CreateMeal(Meal input)
+        public async Task<Meal> CreateMeal(Meal input)
         {
-            throw new NotImplementedException();
+            var result = await _meal_repo.CreateMeal(input);
+            return result;
         }
 
         public Meal DeleteMeal(Guid id)

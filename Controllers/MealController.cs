@@ -7,7 +7,6 @@ using meal_service.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-
 namespace meal_service.Controllers
 {
     [ApiController]
@@ -25,7 +24,7 @@ namespace meal_service.Controllers
         }
 
         [HttpGet("/api/v1/meals")]
-        public async Task<IEnumerable<Meal>> GetMealsAsync()
+        public async Task<IEnumerable<Meal>> GetMeals()
         {
             var result = await _mealService.GetMeals();
             return result;
@@ -38,9 +37,11 @@ namespace meal_service.Controllers
         }
 
         [HttpPost("/api/v1/meals")]
-        public HttpResponse CreateMeal()
+        public async Task<Meal> CreateMeal(Meal mealInput)
         {
-            return null;
+            var result = await _mealService.CreateMeal(mealInput);
+
+            return result;
         }
 
         [HttpPut("/api/v1/meals/{id}")]

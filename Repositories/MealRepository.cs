@@ -4,6 +4,7 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Xml;
 using meal_service.Models;
 using meal_service.Repositories.Interfaces;
 
@@ -18,12 +19,12 @@ namespace meal_service.Repositories
 
         public async Task<List<Meal>> GetMeals()
         {
-
+            //specifying file path
             var filePath = "/Users/mikayla/source/repos/meal-service/Repositories/data.json";
-
+            //opening file
             using FileStream openStream = File.OpenRead(filePath);
+            //reading from file and creating list of meal items
             var items =await JsonSerializer.DeserializeAsync<List<Meal>>(openStream);
-
             return items;
         }
 
@@ -32,9 +33,21 @@ namespace meal_service.Repositories
             throw new NotImplementedException();
         }
 
-        public Meal CreateMeal(Meal input)
+        public async  Task<Meal> CreateMeal(Meal input)
         {
-            throw new NotImplementedException();
+            //specifying file path
+            var filePath = "/Users/mikayla/source/repos/meal-service/Repositories/data.json";
+            //opening file
+            using FileStream openStream = File.OpenRead(filePath);
+            //reading from file and creating list of meal items
+            var items = await JsonSerializer.DeserializeAsync<List<Meal>>(openStream);
+            //appending list to add new input
+            items.Add(input);
+            //serializing list to JSON objects
+            string json = JsonSerializer.Serialize(items);
+            //writing JSON values to file
+            File.WriteAllText(filePath, json);
+            return input;
         }
 
         public Meal DeleteMeal(Guid id)

@@ -9,7 +9,7 @@ namespace meal_service.Services
     {
         public Task<IEnumerable<Meal>> GetMeals();
         public Meal GetMeal(Guid id);
-        public Meal CreateMeal(Meal input);
+        public Task<Meal> CreateMeal(Meal input);
         public Meal UpdateMeal(Guid id);
         public Meal DeleteMeal(Guid id);
     }
