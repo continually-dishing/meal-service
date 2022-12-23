@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using meal_service.Models;
 using meal_service.Services;
@@ -31,9 +32,17 @@ namespace meal_service.Controllers
         }
 
         [HttpGet("/api/v1/meals/{id}")]
-        public Task<Meal> GetMeal(Guid id)
+        public async Task<IActionResult> GetMeal(Guid id)
         {
-            return null;
+            var result = await _mealService.GetMeal(id);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(result);
+            }
         }
 
         [HttpPost("/api/v1/meals")]
@@ -51,9 +60,17 @@ namespace meal_service.Controllers
         }
 
         [HttpDelete("/api/v1/meals/{id}")]
-        public HttpResponse DeleteMeal()
+        public async Task<IActionResult> DeleteMeal(Guid id)
         {
-            return null;
+            var result = await _mealService.DeleteMeal(id);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(result);
+            }
         }
     }
 }

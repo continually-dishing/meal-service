@@ -3,6 +3,7 @@ namespace meal_service.Models
 {
     public class Meal
     {
+        public Guid ID { get; set; }
         public string Name { get; set; }
         public bool Vegetarian { get; set; }
         public bool Vegan { get; set; }

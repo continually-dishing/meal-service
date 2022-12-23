@@ -11,6 +11,6 @@ namespace meal_service.Repositories.Interfaces
         public Task<Meal> GetMeal(Guid id);
         public Task<Meal> CreateMeal(Meal input);
         public Meal UpdateMeal(Guid id);
-        public Meal DeleteMeal(Guid id);
+        public Task<Meal> DeleteMeal(Guid id);
     }
 }

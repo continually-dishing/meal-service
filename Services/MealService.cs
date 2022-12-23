@@ -22,20 +22,24 @@ namespace meal_service.Services
             return result;
         }
 
-        public Meal GetMeal(Guid id)
+        public async Task<Meal> GetMeal(Guid id)
         {
-            throw new NotImplementedException();
+            var result = await _meal_repo.GetMeal(id);
+            return result;
         }
 
         public async Task<Meal> CreateMeal(Meal input)
         {
+            var identifier = Guid.NewGuid(); //generate new guid
+            input.ID = identifier; //assign new guid as ID to meal item
             var result = await _meal_repo.CreateMeal(input);
             return result;
         }
 
-        public Meal DeleteMeal(Guid id)
+        public async Task<Meal> DeleteMeal(Guid id)
         {
-            throw new NotImplementedException();
+            var result = await _meal_repo.DeleteMeal(id);
+            return result;
         }
 
         public Meal UpdateMeal(Guid id)
