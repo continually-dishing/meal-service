@@ -8,27 +8,24 @@ using meal_service.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-namespace meal_service.Controllers
+namespace meal_service
 {
     [ApiController]
     [Route("[controller]")]
     public class MealController : ControllerBase
     {
-
-        private readonly ILogger<MealController> _logger;
         private readonly IMealService _mealService;
 
-        public MealController(ILogger<MealController> logger, IMealService meal_service)
+        public MealController( IMealService meal_service)
         {
-            _logger = logger;
             _mealService = meal_service;
         }
 
         [HttpGet("/api/v1/meals")]
-        public async Task<IEnumerable<Meal>> GetMeals()
+        public async Task<IActionResult> GetMeals()
         {
             var result = await _mealService.GetMeals();
-            return result;
+            return StatusCode(200, result);
         }
 
         [HttpGet("/api/v1/meals/{id}")]
@@ -37,11 +34,11 @@ namespace meal_service.Controllers
             var result = await _mealService.GetMeal(id);
             if (result == null)
             {
-                return NotFound();
+                return StatusCode(404, null);
             }
             else
             {
-                return Ok(result);
+                return StatusCode(200, result);
             }
         }
 
@@ -65,11 +62,11 @@ namespace meal_service.Controllers
             var result = await _mealService.DeleteMeal(id);
             if (result == null)
             {
-                return NotFound();
+                return StatusCode(404);
             }
             else
             {
-                return Ok(result);
+                return StatusCode(200, result);
             }
         }
     }
