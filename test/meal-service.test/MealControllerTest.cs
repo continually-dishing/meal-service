@@ -8,7 +8,7 @@ namespace meal_service.test;
 
     public class MealControllerTest
     {
-        private readonly Mock<IMealService> _mockService;
+        private readonly Mock<IMealService> _mockService; //creating mock variables
         private readonly MealController _controller;
         private Fixture _fixture;
 
