@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.25
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealService.Test", "test\MealService.Test\MealService.Test.csproj", "{68142F7F-11DF-4FBF-B5D1-A4DD390467EE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meal-service", "meal-service.csproj", "{BC959016-3D63-4368-A292-013D2C8FA33E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meal-service.test", "..\test\meal-service.test\meal-service.test.csproj", "{52A5EAC7-4EFB-4341-95DB-E6218E57B027}"
