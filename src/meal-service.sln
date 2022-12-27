@@ -1,0 +1,40 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.25
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealService.Test", "test\MealService.Test\MealService.Test.csproj", "{68142F7F-11DF-4FBF-B5D1-A4DD390467EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meal-service", "meal-service.csproj", "{BC959016-3D63-4368-A292-013D2C8FA33E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "meal-service.test", "..\test\meal-service.test\meal-service.test.csproj", "{52A5EAC7-4EFB-4341-95DB-E6218E57B027}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68142F7F-11DF-4FBF-B5D1-A4DD390467EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68142F7F-11DF-4FBF-B5D1-A4DD390467EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68142F7F-11DF-4FBF-B5D1-A4DD390467EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68142F7F-11DF-4FBF-B5D1-A4DD390467EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC959016-3D63-4368-A292-013D2C8FA33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC959016-3D63-4368-A292-013D2C8FA33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC959016-3D63-4368-A292-013D2C8FA33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC959016-3D63-4368-A292-013D2C8FA33E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A5EAC7-4EFB-4341-95DB-E6218E57B027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A5EAC7-4EFB-4341-95DB-E6218E57B027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A5EAC7-4EFB-4341-95DB-E6218E57B027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A5EAC7-4EFB-4341-95DB-E6218E57B027}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F10084CC-7812-4DF4-8BC5-0F8EBC8DA569}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		outputpath = src
+	EndGlobalSection
+EndGlobal
