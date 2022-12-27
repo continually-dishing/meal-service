@@ -20,7 +20,7 @@ namespace meal_service.Repositories
         public async Task<List<Meal>> GetMeals()
         {
             //specifying file path
-            var filePath = "/Users/mikayla/source/repos/meal-service/Repositories/data.json";
+            var filePath = "/Users/mikayla/source/repos/meal-service/src/Repositories/data.json";
             //opening file
             using FileStream openStream = File.OpenRead(filePath);
             //reading from file and creating list of meal items
@@ -31,7 +31,7 @@ namespace meal_service.Repositories
         public async Task<Meal> GetMeal(Guid id)
         {
             //specifying file path
-            var filePath = "/Users/mikayla/source/repos/meal-service/Repositories/data.json";
+            var filePath = "/Users/mikayla/source/repos/meal-service/src/Repositories/data.json";
             //opening file
             using FileStream openStream = File.OpenRead(filePath);
             //reading from file and creating list of meal items
@@ -43,7 +43,7 @@ namespace meal_service.Repositories
         public async Task<Meal> CreateMeal(Meal input)
         {
             //specifying file path
-            var filePath = "/Users/mikayla/source/repos/meal-service/Repositories/data.json";
+            var filePath = "/Users/mikayla/source/repos/meal-service/src/Repositories/data.json";
             //opening file
             using FileStream openStream = File.OpenRead(filePath);
             //reading from file and creating list of meal items
@@ -60,7 +60,7 @@ namespace meal_service.Repositories
         public async Task<Meal> DeleteMeal(Guid id)
         {
             //specifying file path
-            var filePath = "/Users/mikayla/source/repos/meal-service/Repositories/data.json";
+            var filePath = "/Users/mikayla/source/repos/meal-service/src/Repositories/data.json";
             //opening file
             using FileStream openStream = File.OpenRead(filePath);
             //reading from file and creating list of meal items
