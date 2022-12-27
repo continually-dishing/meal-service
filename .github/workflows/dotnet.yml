@@ -24,5 +24,5 @@ jobs:
       working-directory: ./src
       run: dotnet build --no-restore
     - name: Test
-      working-directory: ./test
+      working-directory: ./test/meal-service.test
       run: dotnet test
