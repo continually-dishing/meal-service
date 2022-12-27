@@ -17,7 +17,8 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-        working-directory: ./src
+    - name: navigate to project
+      working-directory: ./src
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
