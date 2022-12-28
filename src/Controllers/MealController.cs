@@ -43,11 +43,16 @@ namespace meal_service
         }
 
         [HttpPost("/api/v1/meals")]
-        public async Task<Meal> CreateMeal(Meal mealInput)
+        public async Task<IActionResult> CreateMeal(Meal mealInput)
         {
             var result = await _mealService.CreateMeal(mealInput);
 
-            return result;
+            if (result is null)
+            {
+                return StatusCode(400);
+            }
+
+            return StatusCode(200, result);
         }
 
         [HttpPut("/api/v1/meals/{id}")]
